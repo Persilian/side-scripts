@@ -1,0 +1,9 @@
+{
+        "pipeline":{
+                "basepath": "/path/to/your/working/directory"
+        },
+        "project": {
+                "fastqs": "/path/to/your/fastq/files",
+                "samples": "/path/to/a/list/with/sample/names/samples.txt"
+        }
+}
