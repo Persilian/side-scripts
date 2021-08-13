@@ -38,10 +38,10 @@ basepath=$(eval jq .pipeline.basepath $1 | sed 's/^"\(.*\)"$/\1/')
 fastqs=$(eval jq .project.fastqs $1 | sed 's/^"\(.*\)"$/\1/')
 samples=$(eval jq .project.samples $1 | sed 's/^"\(.*\)"$/\1/')
 
-#Output to a directory specified in a .json file
-array_job1_out="${basepath}array_job1_out"
+#Create a variable with the name of your output directory, feel free to rename the output directory
+array_job1_out="${basepath}/array_job1_out"
 
-#Create an output directory, feel free to rename it
+#Create an output directory based on the variable above
 echo $basepath
 mkdir $array_job1_out
 cd $array_job1_out
