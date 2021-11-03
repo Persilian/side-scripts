@@ -4,7 +4,8 @@
 #SBATCH --time=01:00:00                 #hours:minutes:seconds
 #SBATCH --cpus-per-task=8               #CPU number must equal thread number of invoked commands
 #SBATCH --mem=80G                       #Memory pool for all cores (see also --mem-per-cpu)
-#SBATCH --partition=partition_name      #Partition name of your cluster
+#SBATCH --partition=epyc2               #Partition to submit to
+#SBATCH --qos=job_epyc2                 #Sub-partition
 #SBATCH --output=array_job1-%A_\%a.out  #File to which STDOUT will be written
 #SBATCH --error=array_job1-%A_\%a.err   #File to which STDERR will be written 
 #SBATCH --array=1-6                     #range of array jobs, e.g. single-end read files 1-6 will be processed in 6 individual jobs
